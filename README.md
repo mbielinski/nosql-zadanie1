@@ -1,5 +1,5 @@
 #Wstęp 
-Realizacje zadań prowadziłem na PC z wykorzystaniem maszyn wirtualnych linuxa oraz windowsa 7.
+Realizacje zadań prowadziłem na PC z wykorzystaniem maszyn wirtualnych linuxa(ubuntu) oraz windowsa 7.
 PC host posiadał takie parametry:
 
 Procesor: Intel Core i5 3470 4x3.20 GHz
@@ -11,8 +11,8 @@ Dysk Twardy: WD Red 1TB WD10EFRX (64MB, SATA/600)
 System : Windows 7 Professional x64
 
 #Zadanie 1a 
-Usunięcie znaków nowych lini z pliku Train.csv aby poprawnie zaimportować plik do bazy danych.
-Wykorzystanie tego skryptu.
+Najpierw usunąłem znaki nowych lini z pliku Train.csv aby poprawnie zaimportować plik do bazy danych.
+Wykorzystałem skrypt ze strony prowadzącego.
 ```sh
 	#! /bin/bash
 
@@ -29,7 +29,8 @@ sed -i '$ d' "$2"
 sed -i '1 c "_id","title","body","tags"' "$2"
 ```
 
-Wykonanie komendy w bashu:
+Wykonałem poniższą komendę w bashu:
+ps. Wcześniej podejmowałem próby usunięcia nowych lini w windowsie w powershellu ale po kilku próbach się poddałem(jeden raz próba trwała ponad 2 dni!). Na koniec maszyna wirtualna od windowsa mi padła. 
 ```sh
 student@virtualbox:~/share/train$ time ./2unix.sh Train.csv train3.csv
 real	27m45.500s
@@ -38,7 +39,7 @@ sys	12m57.488s
 student@virtualbox:~/share/train$
 ```
 
-Zaimportowanie pliku csv na Winowsie.
+Zaimportowałem plik csv na Winowsie do mongo.
 
 ```sh
 	Measure-Command  {.\mongoimport.exe -d train -c train --type csv --headerline --file E:\train\train3.csv}
@@ -63,6 +64,7 @@ TotalMilliseconds : 1221255,7648
 
 #Zadanie 1b
 
+Wykonałem komendę count w robomongo.
 ```sh
 	> db.train.count()
 	6034195
