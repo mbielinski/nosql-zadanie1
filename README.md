@@ -41,6 +41,8 @@ student@virtualbox:~/share/train$
 
 Zaimportowałem plik csv na Winowsie do mongo.
 
+(wersja 2.6.5 standard)
+
 ```sh
 	Measure-Command  {.\mongoimport.exe -d train -c train --type csv --headerline --file E:\train\train3.csv}
 ```
@@ -51,16 +53,38 @@ Wynik czasu z powershella:
 	
 Days              : 0
 Hours             : 0
-Minutes           : 20
-Seconds           : 21
-Milliseconds      : 255
-Ticks             : 12212557648
-TotalDays         : 0,0141349046851852
-TotalHours        : 0,339237712444444
-TotalMinutes      : 20,3542627466667
-TotalSeconds      : 1221,2557648
-TotalMilliseconds : 1221255,7648
+Minutes           : 36
+Seconds           : 2
+Milliseconds      : 356
+Ticks             : 21623565803
+TotalDays         : 0,0250272752349537
+TotalHours        : 0,600654605638889
+TotalMinutes      : 36,0392763383333
+TotalSeconds      : 2162,3565803
+TotalMilliseconds : 2162356,5803
 ```
+
+(wersja 3.0)
+
+```sh
+	Measure-Command  { .\mongoimport.exe --db train --collection train2 --type csv --file E:\train\train3.csv --headerline }
+```
+
+Wynik czasu z powershella
+
+```sh
+	
+Days              : 0
+Hours             : 0
+Minutes           : 25
+Seconds           : 40
+Milliseconds      : 817
+Ticks             : 15408178325
+TotalDays         : 0,0178335397280093
+TotalHours        : 0,428004953472222
+TotalMinutes      : 25,6802972083333
+TotalSeconds      : 1540,8178325
+TotalMilliseconds : 1540817,8325
 
 #Zadanie 1b
 
