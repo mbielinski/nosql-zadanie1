@@ -69,7 +69,8 @@ TotalMilliseconds : 2162356,5803
 ```sh
 	Measure-Command  { .\mongoimport.exe --db train --collection train2 --type csv --file E:\train\train3.csv --headerline }
 ```
-
+![Train](https://github.com/mbielinski/nosql-zadanie1/train3_1.png)
+![Train](https://github.com/mbielinski/nosql-zadanie1/train3_2.png)
 Wynik czasu z powershella
 
 ```sh
@@ -85,6 +86,8 @@ TotalHours        : 0,428004953472222
 TotalMinutes      : 25,6802972083333
 TotalSeconds      : 1540,8178325
 TotalMilliseconds : 1540817,8325
+```
+
 
 #Zadanie 1b
 
@@ -112,7 +115,7 @@ bazadanych.forEach(function (record) {
 
 ```
 
-Wynik czasu z powershella:
+Wynik czasu z powershella (mongo 2.6.5):
 ```sh
 > Measure-Command  {.\mongo.exe C:\temp\skrypt.js}
 
@@ -128,4 +131,22 @@ TotalHours        : 1,31396027844444
 TotalMinutes      : 78,8376167066667
 TotalSeconds      : 4730,2570024
 TotalMilliseconds : 4730257,0024
+```
+
+Wynik czasu z powershella (mongo 3.0) - wynik jest zbliżony, różnice mogą wynikać z innego ociążenia komputera w czasie pomiarów:
+```sh
+> Measure-Command  {.\mongo.exe C:\temp\skrypt.js}
+
+Days              : 0
+Hours             : 1
+Minutes           : 22
+Seconds           : 16
+Milliseconds      : 241
+Ticks             : 49362416365
+TotalDays         : 0,0571324263483796
+TotalHours        : 1,37117823236111
+TotalMinutes      : 82,2706939416667
+TotalSeconds      : 4936,2416365
+TotalMilliseconds : 4936241,6365
+
 ```
