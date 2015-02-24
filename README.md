@@ -69,8 +69,8 @@ TotalMilliseconds : 2162356,5803
 ```sh
 	Measure-Command  { .\mongoimport.exe --db train --collection train2 --type csv --file E:\train\train3.csv --headerline }
 ```
-![Train](https://github.com/mbielinski/nosql-zadanie1/train3_1.png)
-![Train](https://github.com/mbielinski/nosql-zadanie1/train3_2.png)
+![Train](https://github.com/mbielinski/nosql-zadanie1/blob/master/train3_1.png)
+![Train](https://github.com/mbielinski/nosql-zadanie1/blob/master/train3_2.png)
 Wynik czasu z powershella
 
 ```sh
